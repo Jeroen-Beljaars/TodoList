@@ -1,10 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import {Provider} from "mobx-react";
+import * as stores from './stores/index'
+
+import TodoList from './components/TodoList';
+
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+
+ReactDOM.render(
+    <Provider {...stores }>
+        <TodoList />
+    </Provider>,
+    document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,3 +1,15 @@
+## Sources
+For the simple todo setup:<br>
+https://www.youtube.com/watch?v=_q50BXqkAfI<br>
+https://www.youtube.com/watch?v=nYvNqKrl69s
+
+For the outlines of the cards:<br>
+https://github.com/mkmanges/react-social-card
+
+For the modal:<br>
+https://alligator.io/react/modal-component/
+
+##
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
