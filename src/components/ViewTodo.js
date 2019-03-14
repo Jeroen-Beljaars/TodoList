@@ -11,7 +11,6 @@ class ViewTodo extends Component {
     closeModal = () => {
         this.props.todo.show = false
         this.setState({validTitle: true});
-        this.title.value = ""; this.description.value = "";
     }
 
     updateTodo() {
@@ -20,8 +19,6 @@ class ViewTodo extends Component {
         if (valid) {
             this.props.todo.title = this.title.value
             this.props.todo.description = this.description.value
-            this.title.value = ""
-            this.description.value = ""
             this.closeModal()
         }
     }
@@ -32,7 +29,7 @@ class ViewTodo extends Component {
             <div className="invalid-feedback">This field is required</div>
         return (
             <div>
-                <Modal show={this.props.todo.show} handleClose={this.closeModal} handleSave={this.newTodo} title="View/Edit todo">
+                <Modal show={this.props.todo.show} handleClose={this.closeModal} handleSave={this.updateTodo.bind(this)} title="View/Edit todo">
                     <form>
                         <div className="form-group">
                             <label htmlFor="title">Title</label>
