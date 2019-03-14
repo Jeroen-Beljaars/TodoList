@@ -19,6 +19,7 @@ class ViewTodo extends Component {
         if (valid) {
             this.props.todo.title = this.title.value
             this.props.todo.description = this.description.value
+            this.props.todo.date = new Date()
             this.closeModal()
         }
     }
